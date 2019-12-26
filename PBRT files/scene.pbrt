@@ -1,0 +1,162 @@
+Film "image" "integer xresolution" 3000 "integer yresolution" 3000
+
+Integrator "path"
+
+Sampler "random" "integer pixelsamples" 4
+
+Scale -1 1 1
+Rotate 77.39041461731328 0.7734381556510925 -0.3338310122489929 0.5388416051864624
+Translate 7.481131553649902 6.5076398849487305 5.34366512298584
+Camera "perspective" "float fov" [50]
+
+WorldBegin
+
+# Point light source
+AttributeBegin
+CoordSysTransform "camera"
+Translate -2 -1.3 -0.5
+LightSource "point" "color I" [800 800 800] 
+AttributeEnd
+
+Texture "tex_1.png" "color" "imagemap" "string filename" "tex_1.png"
+MakeNamedMaterial "Material"
+        "string type" "matte"
+        "texture Kd" "tex_1.png"
+
+Texture "tex_2.png" "color" "imagemap" "string filename" "tex_2.png"
+MakeNamedMaterial "Material.001"
+        "string type" "matte"
+        "texture Kd" "tex_2.png"
+
+MakeNamedMaterial "Material.003"
+        "string type" "matte"
+        "rgb Kd" [ 0.38428884744644165 0.38428884744644165 0.38428884744644165 ]
+
+MakeNamedMaterial "Material.004"
+        "string type" "matte"
+        "rgb Kd" [ 0.7229412794113159 0.7229412794113159 0.7229412794113159 ]
+
+MakeNamedMaterial "Material.013"
+        "string type" "mirror"
+        "rgb Kr" [ 0.5487566590309143 0.5487566590309143 0.5487566590309143 ]
+
+Texture "tex_5.png" "color" "imagemap" "string filename" "tex_5.png"
+MakeNamedMaterial "Material.014"
+        "string type" "matte"
+        "texture Kd" "tex_5.png"
+
+Texture "tex_6.png" "color" "imagemap" "string filename" "tex_6.png"
+MakeNamedMaterial "Material.015"
+        "string type" "matte"
+        "texture Kd" "tex_6.png"
+
+Texture "tex_7.png" "color" "imagemap" "string filename" "tex_7.png"
+MakeNamedMaterial "Material.016"
+        "string type" "matte"
+        "texture Kd" "tex_7.png"
+
+Texture "tex_8.png" "color" "imagemap" "string filename" "tex_8.png"
+MakeNamedMaterial "Material.017"
+        "string type" "matte"
+        "texture Kd" "tex_8.png"
+
+# Scene bounds: (-7.963347, -9.425272, -7.929239) - (4.948058, 3.738248, 1.006143)
+
+# Name "12140_Skull_v3_teeth.001"
+AttributeBegin
+    NamedMaterial "Material.016"
+    Shape "plymesh" "string filename" "mesh_00001.ply" 
+AttributeEnd
+
+# Name "12140_Skull_v3_jaw.001"
+AttributeBegin
+    NamedMaterial "Material.015"
+    Shape "plymesh" "string filename" "mesh_00002.ply" 
+AttributeEnd
+
+# Name "12140_Skull_v3.001"
+AttributeBegin
+    NamedMaterial "Material.014"
+    Shape "plymesh" "string filename" "mesh_00003.ply" 
+AttributeEnd
+
+# Name "12140_Skull_v3_teeth_lower.001"
+AttributeBegin
+    NamedMaterial "Material.017"
+    Shape "plymesh" "string filename" "mesh_00004.ply" 
+AttributeEnd
+
+# Name "MirrorBox_Cube"
+AttributeBegin
+    NamedMaterial "Material.013"
+    Shape "trianglemesh" 
+            "integer indices" [ 0 1 2 0 2 3 4 5 6 4 6 7 8 9 10 8 10 11 12 13 14 
+            12 14 15 16 17 18 16 18 19 20 21 22 20 22 23 ] 
+            "point P" [ -1.17650497 -0.428651005 0.552536011 -1.45049 -2.56909108 0.0172610004 
+            -1.30400205 -2.39980507 -0.734655023 -1.03001702 -0.259364992 -0.199379995 
+            -1.03001702 -0.259364992 -0.199379995 -1.30400205 -2.39980507 -0.734655023 
+            -3.38073397 -2.0523591 -1.06101894 -3.10674906 0.0880810022 -0.525744021 
+            -3.10674906 0.0880810022 -0.525744021 -3.38073397 -2.0523591 -1.06101894 
+            -3.52722192 -2.22164512 -0.309103012 -3.25323701 -0.081205003 0.226172 
+            -3.25323701 -0.081205003 0.226172 -3.52722192 -2.22164512 -0.309103012 
+            -1.45049 -2.56909108 0.0172610004 -1.17650497 -0.428651005 0.552536011 
+            -1.03001702 -0.259364992 -0.199379995 -3.10674906 0.0880810022 -0.525744021 
+            -3.25323701 -0.081205003 0.226172 -1.17650497 -0.428651005 0.552536011 
+            -3.38073397 -2.0523591 -1.06101894 -1.30400205 -2.39980507 -0.734655023 
+            -1.45049 -2.56909108 0.0172610004 -3.52722192 -2.22164512 -0.309103012 ] 
+            "normal N" [ 0.974699974 -0.163100004 0.153200001 0.974699974 -0.163100004 0.153200001 
+            0.974699974 -0.163100004 0.153200001 0.974699974 -0.163100004 0.153200001 
+            0.186700001 0.215800002 -0.958400011 0.186700001 0.215800002 -0.958400011 
+            0.186700001 0.215800002 -0.958400011 0.186700001 0.215800002 -0.958400011 
+            -0.974699974 0.163100004 -0.153200001 -0.974699974 0.163100004 -0.153200001 
+            -0.974699974 0.163100004 -0.153200001 -0.974699974 0.163100004 -0.153200001 
+            -0.186700001 -0.215800002 0.958400011 -0.186700001 -0.215800002 0.958400011 
+            -0.186700001 -0.215800002 0.958400011 -0.186700001 -0.215800002 0.958400011 
+            0.123199999 0.962700009 0.240799993 0.123199999 0.962700009 0.240799993 
+            0.123199999 0.962700009 0.240799993 0.123199999 0.962700009 0.240799993 
+            -0.123199999 -0.962700009 -0.240799993 -0.123199999 -0.962700009 -0.240799993 
+            -0.123199999 -0.962700009 -0.240799993 -0.123199999 -0.962700009 -0.240799993 ] 
+AttributeEnd
+
+# Name "LeftGrayPlane_Plane.004"
+AttributeBegin
+    NamedMaterial "Material.003"
+    Shape "trianglemesh" 
+            "integer indices" [ 0 1 2 0 2 3 ] 
+            "point P" [ 4.94805813 -4.86275721 -6.76139498 3.80930901 -6.22269487 0.123777002 
+            -2.02682805 2.37830901 0.857374012 -0.888077974 3.73824811 -6.02779818 ] 
+            "normal N" [ -0.81279999 -0.531099975 -0.239299998 -0.81279999 -0.531099975 -0.239299998 
+            -0.81279999 -0.531099975 -0.239299998 -0.81279999 -0.531099975 -0.239299998 ] 
+AttributeEnd
+
+# Name "Carton_Cube.001"
+AttributeBegin
+    NamedMaterial "Material"
+    Shape "plymesh" "string filename" "mesh_00005.ply" 
+AttributeEnd
+
+# Name "RightWhitePlane_Plane.002"
+AttributeBegin
+    NamedMaterial "Material.004"
+    Shape "trianglemesh" 
+            "integer indices" [ 0 1 2 0 2 3 ] 
+            "point P" [ -1.95794404 2.24882698 1.00614297 -7.84396982 -1.695997 -0.843582988 
+            -6.29578495 -0.683564007 -7.9292388 -0.409759998 3.26125908 -6.07951307 ] 
+            "normal N" [ 0.556100011 -0.831099987 0.0027999999 0.556100011 -0.831099987 0.0027999999 
+            0.556100011 -0.831099987 0.0027999999 0.556100011 -0.831099987 0.0027999999 ] 
+AttributeEnd
+
+# Name "WoodenPlane_Plane"
+AttributeBegin
+    NamedMaterial "Material.001"
+    Shape "trianglemesh" 
+            "integer indices" [ 0 1 2 0 2 3 ] 
+            "point2 st" [ 9.99999975e-05 9.99999975e-05 0.999899983 9.99999975e-05 
+            0.999899983 0.999899983 9.99999975e-05 0.999899983 ] 
+            "point P" [ 3.33577108 -5.50911379 0.168564007 -2.65756702 -9.42527199 -1.59619296 
+            -7.96334696 -1.60579097 -0.929243982 -1.97001004 2.31036711 0.835512996 ] 
+            "normal N" [ 0.1602 0.191300005 -0.968400002 0.1602 0.191300005 -0.968400002 
+            0.1602 0.191300005 -0.968400002 0.1602 0.191300005 -0.968400002 ] 
+AttributeEnd
+
+WorldEnd
